@@ -1,0 +1,1584 @@
+/* ============================================================
+   FONTS
+============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+@font-face {
+  font-family: 'Airstrike';
+  src: url('fonts/Airstrike.ttf');
+}
+
+@font-face {
+  font-family: 'Nulshock';
+  src: url('fonts/Nulshock.otf');
+}
+
+/* ============================================================
+   ROOT THEME VARIABLES
+============================================================ */
+:root {
+  --neon-purple: #A020F0;
+  --neon-pink: #FF2EC4;
+  --neon-blue: #00C8FF;
+  --deep-black: #0A0A0F;
+  --dark-grey: #1A1A22;
+  --light-grey: #D9D9D9;
+
+  --pulse-gradient: linear-gradient(135deg, #A020F0, #FF2EC4, #00C8FF);
+
+  --font-main: 'Montserrat', sans-serif;
+  --font-display: 'Airstrike', sans-serif;
+  --font-tech: 'Nulshock', sans-serif;
+
+  --card-radius: 14px;
+  --smooth: 0.3s ease;
+}
+
+/* ============================================================
+   GLOBAL RESET
+============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--deep-black);
+  color: white;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  border-radius: var(--card-radius);
+}
+
+section {
+  padding: 60px 30px;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+============================================================ */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+}
+
+p {
+  color: var(--light-grey);
+}
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+header {
+  background: var(--dark-grey);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 170%;
+  background: var(--pulse-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-right: -100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--smooth);
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--neon-pink);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+}
+
+/* Mobile nav */
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  background: var(--dark-grey);
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 60%;
+  padding: 20px;
+  gap: 20px;
+  border-left: 2px solid var(--neon-blue);
+  border-bottom: 2px solid var(--neon-blue);
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+.cta-btn,
+.book-btn,
+.auth-buttons a {
+  display: inline-block;
+  background: var(--pulse-gradient);
+  padding: 12px 25px;
+  border-radius: var(--card-radius);
+  color: white;
+  font-family: var(--font-tech);
+  text-decoration: none;
+  transition: var(--smooth);
+}
+
+.cta-btn:hover,
+.book-btn:hover,
+.auth-buttons a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px var(--neon-pink);
+}
+
+/* ============================================================
+   HOME PAGE — HERO
+============================================================ */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  padding: 60px 30px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  color: var(--neon-blue);
+}
+
+.hero-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--light-grey);
+  margin-bottom: 5px;
+}
+
+.hero-text {
+  margin: 15px 0 25px;
+}
+
+.hero-placeholder {
+  border-radius: var(--card-radius);
+  border: 2px dashed var(--neon-blue);
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-grey);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   HOME PAGE — EXPERIENCES
+============================================================ */
+.experiences-section {
+  text-align: center;
+}
+
+.experiences-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.experience-card {
+  background: var(--dark-grey);
+  padding: 20px;
+  border-radius: var(--card-radius);
+  transition: var(--smooth);
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.experience-media {
+  height: 150px;
+  border-radius: var(--card-radius);
+  border: 2px dashed var(--neon-purple);
+  margin-bottom: 15px;
+}
+
+/* ============================================================
+   HOME PAGE — VENUES
+============================================================ */
+.venues-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.venue-select-wrapper select {
+  padding: 10px 14px;
+  border-radius: var(--card-radius);
+  border: 2px solid var(--neon-blue);
+  background: var(--dark-grey);
+  color: white;
+}
+
+.venues-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.venue-card {
+  background: var(--dark-grey);
+  padding: 20px;
+  border-radius: var(--card-radius);
+  transition: var(--smooth);
+}
+
+.venue-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.venue-image {
+  height: 140px;
+  border-radius: var(--card-radius);
+  border: 2px dashed var(--neon-blue);
+  margin-bottom: 12px;
+}
+
+/* ============================================================
+   CONTENTS PAGE
+============================================================ */
+#searchBar,
+#categoryFilter {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--card-radius);
+  background: var(--dark-grey);
+  color: white;
+  border: 2px solid var(--neon-blue);
+  transition: var(--smooth);
+}
+
+#searchBar:focus,
+#categoryFilter:hover {
+  box-shadow: 0 0 12px var(--neon-blue);
+}
+
+.contents-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.content-card {
+  background: var(--dark-grey);
+  padding: 20px;
+  border-radius: var(--card-radius);
+  transition: var(--smooth);
+}
+
+.content-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+/* ============================================================
+   LOGIN / SIGNUP PAGE
+============================================================ */
+.hidden {
+  display: none;
+}
+
+.auth-box {
+  background: var(--dark-grey);
+  padding: 25px;
+  border-radius: var(--card-radius);
+  animation: fadeIn var(--smooth);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-buttons .active {
+  box-shadow: 0 0 12px var(--neon-pink);
+}
+
+/* ============================================================
+   BOOKING PAGE
+============================================================ */
+.booking-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--card-radius);
+  background: var(--dark-grey);
+  border: 2px solid var(--neon-purple);
+  color: white;
+  transition: var(--smooth);
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  box-shadow: 0 0 12px var(--neon-purple);
+}
+
+.order-summary {
+  background: var(--dark-grey);
+  padding: 25px;
+  border-radius: var(--card-radius);
+  box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.order-summary h3,
+.order-summary h4 {
+  color: var(--neon-blue);
+}
+
+.order-summary .price,
+.order-summary .total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--neon-pink);
+}
+
+/* ============================================================
+   MEMBERSHIP PAGE
+============================================================ */
+.membership-section {
+  text-align: center;
+  padding: 60px 30px;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.membership-card {
+  background: var(--dark-grey);
+  padding: 30px;
+  border-radius: var(--card-radius);
+  box-shadow: 0 0 15px var(--neon-blue);
+  transition: var(--smooth);
+}
+
+.membership-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--neon-pink);
+}
+
+.membership-card.highlight {
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 0 25px var(--neon-pink);
+}
+
+.membership-card h2 {
+  color: var(--neon-blue);
+  margin-bottom: 10px;
+}
+
+.membership-card .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--neon-pink);
+  margin-bottom: 20px;
+}
+
+.membership-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.membership-card ul li {
+  color: var(--light-grey);
+  margin: 8px 0;
+}
+
+.membership-card .cta-btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer {
+  background: var(--dark-grey);
+  padding: 40px 30px;
+  margin-top: 60px;
+  border-top: 2px solid var(--neon-blue);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+footer p {
+  color: var(--light-grey);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.4rem;
+  transition: var(--smooth);
+}
+
+.social-icons a:hover {
+  color: var(--neon-pink);
+  transform: scale(1.2);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 900px) {
+
+  /* NAV */
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  /* VENUES */
+  .venues-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* BOOKINGS */
+  .booking-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTENTS */
+  .contents-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* MEMBERSHIP */
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-card {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .membership-card.highlight {
+    order: -1;
+  }
+}
+body {
+  background: radial-gradient(circle at top, #11111A 0%, var(--deep-black) 42%);
+}
+
+header {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+.nav-links a {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--pulse-gradient);
+  transition: var(--smooth);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.page-header,
+.enhanced-header {
+  padding: 70px 30px 35px;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.page-header h1,
+.enhanced-header h1 {
+  font-size: clamp(2.2rem, 4vw, 4.6rem);
+  color: #fff;
+  text-shadow: 0 0 18px rgba(0, 200, 255, 0.35);
+  margin-bottom: 12px;
+}
+
+.page-header p,
+.enhanced-header p {
+  max-width: 760px;
+  font-size: 1.05rem;
+  color: #f2f2f4;
+}
+
+.eyebrow,
+.plan-label,
+.popular-badge {
+  color: var(--neon-pink) !important;
+  font-family: var(--font-tech);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.78rem !important;
+  margin-bottom: 8px;
+}
+
+.filter-section {
+  padding: 20px 30px 35px;
+}
+
+.filter-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr auto;
+  align-items: end;
+  gap: 18px;
+  background: rgba(26, 26, 34, 0.82);
+  border: 1px solid rgba(0, 200, 255, 0.35);
+  border-radius: var(--card-radius);
+  padding: 18px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.results-count {
+  color: var(--neon-blue);
+  font-weight: 700;
+  white-space: nowrap;
+  padding-bottom: 12px;
+}
+
+.contents-grid {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.content-card,
+.experience-card,
+.venue-card,
+.membership-card {
+  border: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(34,34,44,0.96), rgba(22,22,31,0.96));
+}
+
+.content-card {
+  padding: 30px;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.content-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 1px var(--neon-blue), 0 18px 40px rgba(0, 200, 255, 0.16);
+}
+
+.content-media {
+  height: 150px;
+  border-radius: var(--card-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-tech);
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: var(--pulse-gradient);
+  box-shadow: inset 0 0 45px rgba(0,0,0,0.35);
+}
+
+.action-media { background: linear-gradient(135deg, #0d0d17, #A020F0, #00C8FF); }
+.puzzle-media { background: linear-gradient(135deg, #0d0d17, #00C8FF, #6a00ff); }
+.adventure-media { background: linear-gradient(135deg, #080814, #263cff, #FF2EC4); }
+.horror-media { background: linear-gradient(135deg, #050505, #5a001c, #FF2EC4); }
+
+.card-topline,
+.card-meta,
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag,
+.card-meta span,
+.modal-stats span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.tag.action { color: #72e7ff; }
+.tag.puzzle { color: #d28dff; }
+.tag.adventure { color: #9cc9ff; }
+.tag.horror { color: #ff8abe; }
+
+.content-card h3 {
+  font-size: 1.45rem;
+  color: white;
+}
+
+.content-card p {
+  color: #f0f0f2;
+  max-width: 95%;
+}
+
+.card-meta {
+  margin-top: auto;
+}
+
+.card-actions {
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.view-details {
+  color: var(--neon-blue);
+  font-weight: 800;
+}
+
+.secondary-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: var(--card-radius);
+  border: 2px solid var(--neon-blue);
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-tech);
+  margin-left: 12px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stats-section {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 20px 30px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card,
+.featured-banner,
+.comparison-card {
+  background: linear-gradient(180deg, rgba(34,34,44,0.96), rgba(22,22,31,0.96));
+  border: 1px solid rgba(0, 200, 255, 0.28);
+  border-radius: var(--card-radius);
+  padding: 24px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--neon-blue);
+  font-family: var(--font-tech);
+}
+
+.stat-card span {
+  color: white;
+}
+
+.featured-banner {
+  max-width: 1220px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 26px rgba(0, 200, 255, 0.12);
+}
+
+.experience-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.experience-modal.hidden {
+  display: none;
+}
+
+.modal-panel {
+  width: min(560px, 100%);
+  background: #191923;
+  border: 2px solid var(--neon-blue);
+  border-radius: var(--card-radius);
+  padding: 34px;
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.25);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.modal-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 24px;
+}
+
+.membership-section {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.membership-grid {
+  align-items: stretch;
+}
+
+.membership-card {
+  text-align: left;
+  position: relative;
+}
+
+.membership-card:hover {
+  transform: translateY(-8px);
+}
+
+.membership-card .price {
+  font-size: 2rem;
+}
+
+.membership-card .price span {
+  font-size: 1rem;
+  color: var(--light-grey);
+}
+
+.plan-summary {
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  right: 22px;
+  background: var(--pulse-gradient);
+  color: white !important;
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+.comparison-card {
+  margin-top: 44px;
+  text-align: left;
+}
+
+.comparison-card h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+.table-wrap {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  text-align: left;
+}
+
+.comparison-table th {
+  color: var(--neon-blue);
+  font-family: var(--font-tech);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .filter-container {
+    grid-template-columns: 1fr;
+  }
+
+  .results-count {
+    padding-bottom: 0;
+  }
+
+  .featured-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .secondary-btn {
+    margin-left: 0;
+  }
+}
+
+/* ============================================================
+   MOBILE-FIRST RESPONSIVE FIXES
+   Added after user feedback: improves phone/tablet compatibility,
+   removes horizontal overflow, stacks controls, enlarges tap targets,
+   and makes cards/forms easier to scan on small screens.
+============================================================ */
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+input,
+select,
+button,
+a {
+  min-height: 44px;
+}
+
+@media (max-width: 768px) {
+  section,
+  .page-header,
+  .enhanced-header,
+  .membership-section,
+  .filter-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  header {
+    padding: 12px 16px;
+  }
+
+  .navbar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+    margin-right: 0;
+    line-height: 1.2;
+    max-width: 190px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(0, 200, 255, 0.45);
+    border-radius: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 18px;
+    border: 1px solid rgba(0, 200, 255, 0.55);
+    border-radius: 0 0 14px 14px;
+    z-index: 2000;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .auth-buttons {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .auth-buttons a,
+  .cta-btn,
+  .book-btn,
+  .secondary-btn {
+    text-align: center;
+    padding: 12px 14px;
+    font-size: 0.78rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 34px 16px;
+    gap: 24px;
+    text-align: left;
+  }
+
+  .hero-visual {
+    order: 0;
+  }
+
+  .hero-content h1,
+  .page-header h1,
+  .enhanced-header h1 {
+    font-size: clamp(1.8rem, 10vw, 2.75rem);
+    line-height: 1.1;
+    word-break: normal;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero-placeholder {
+    height: 190px;
+  }
+
+  .stats-section {
+    padding: 10px 16px 28px;
+    grid-template-columns: 1fr;
+  }
+
+  .featured-banner {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 20px;
+  }
+
+  .experiences-grid,
+  .venues-grid,
+  .membership-grid,
+  .contents-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .contents-grid {
+    padding: 20px 16px 0;
+  }
+
+  .content-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .content-media {
+    height: 120px;
+    font-size: 0.95rem;
+  }
+
+  .card-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .view-details {
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  .filter-container {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  #searchBar,
+  #categoryFilter,
+  .booking-form input,
+  .booking-form select {
+    font-size: 16px;
+  }
+
+  .booking-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .order-summary {
+    position: static;
+    padding: 20px;
+  }
+
+  .membership-card {
+    max-width: none;
+    width: 100%;
+    padding: 22px;
+  }
+
+  .popular-badge {
+    position: static;
+    display: inline-flex;
+    margin-bottom: 12px;
+  }
+
+  .table-wrap {
+    margin-left: -4px;
+    margin-right: -4px;
+    padding-bottom: 8px;
+  }
+
+  .comparison-table {
+    min-width: 600px;
+  }
+
+  .modal-panel {
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 24px 20px;
+  }
+
+  footer {
+    padding: 28px 16px;
+    margin-top: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    font-size: 0.95rem;
+    max-width: 155px;
+  }
+
+  .auth-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1,
+  .page-header h1,
+  .enhanced-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-header,
+  .enhanced-header {
+    padding-top: 36px;
+    padding-bottom: 22px;
+  }
+
+  .content-card h3,
+  .experience-card h3,
+  .venue-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-meta span,
+  .tag,
+  .modal-stats span {
+    font-size: 0.7rem;
+    padding: 6px 8px;
+  }
+}
+.hero-visual {
+  position: relative;
+  overflow: hidden;
+}
+.hero-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.hero-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.experience-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* keeps proportions and fills the box neatly */
+  display: block;
+}
+.experience-card {
+  display: inline-block;
+  width: 600px; /* or whatever size your card should be */
+}
+
+.experience-media {
+  width: 100%;
+  border: 2px dashed #ff00ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* This forces the pink box to stay the same shape */
+.media-ratio {
+  position: relative;
+  width: 100%;
+  padding-top: 60%; /* controls height — change to 50%, 70%, etc */
+}
+
+/* This makes the image responsive inside the box */
+.media-ratio img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   IMAGE PLACEHOLDER + RESPONSIVE CARD FIXES
+   - Use the exact image filenames in the HTML and drop files into /images
+   - Images automatically crop inside the dotted rounded boxes
+   - Missing images show a clean placeholder label instead of a broken layout
+============================================================ */
+.experiences-grid,
+.venues-grid {
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-card,
+.venue-card,
+.content-card {
+  width: 100% !important;
+  min-width: 0;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.image-placeholder,
+.experience-media,
+.venue-image,
+.content-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.02);
+}
+
+.experience-media,
+.venue-image,
+.content-media {
+  border-style: dashed !important;
+  border-width: 2px !important;
+}
+
+.experience-media {
+  aspect-ratio: 16 / 4.2;
+  height: auto !important;
+  border-color: var(--neon-pink) !important;
+}
+
+.venue-image {
+  aspect-ratio: 16 / 4.2;
+  height: auto !important;
+  border-color: var(--neon-blue) !important;
+}
+
+.content-media {
+  aspect-ratio: 16 / 5;
+  height: auto !important;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 0;
+}
+
+.image-placeholder span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font-tech);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.image-placeholder.has-image span {
+  display: none;
+}
+
+.experience-card h3,
+.venue-card h3 {
+  margin-top: 18px;
+}
+
+.experience-card .book-btn,
+.venue-card .book-btn {
+  align-self: center;
+  margin-top: auto;
+}
+
+.venues-header {
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.venue-select-wrapper {
+  min-width: 220px;
+}
+
+.venue-select-wrapper select {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .experience-media,
+  .venue-image,
+  .content-media {
+    aspect-ratio: 16 / 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .experiences-section,
+  .venues-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .experiences-grid,
+  .venues-grid,
+  .contents-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100%;
+    gap: 20px !important;
+  }
+
+  .experience-card,
+  .venue-card,
+  .content-card {
+    padding: 16px !important;
+  }
+
+  .experience-media,
+  .venue-image,
+  .content-media {
+    aspect-ratio: 16 / 7;
+  }
+
+  .venues-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  .venue-select-wrapper {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .experience-card .book-btn,
+  .venue-card .book-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .experience-media,
+  .venue-image,
+  .content-media {
+    aspect-ratio: 16 / 8;
+  }
+}
+
+/* ============================================================
+   FINAL FEEDBACK CHANGES
+   - Category feedback message
+   - Centred login/sign up forms
+   - Better mobile form layout
+============================================================ */
+
+/* Helps users understand what the category filter is showing */
+.filter-help {
+  max-width: 1220px;
+  margin: 12px auto 0;
+  color: var(--light-grey);
+  font-size: 0.92rem;
+}
+
+/* Highlight the filter area when a category is selected */
+.filter-container.filter-active {
+  box-shadow: 0 0 18px rgba(0, 200, 255, 0.18);
+  border-color: var(--neon-pink);
+}
+
+/* Keeps the login page focused in the middle of the screen */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-page .page-header {
+  text-align: center;
+  padding-bottom: 18px;
+}
+
+/* Centres the login/sign up box horizontally and vertically */
+.auth-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 16px 70px;
+}
+
+.auth-box {
+  width: min(440px, 100%);
+  border: 1px solid rgba(0, 200, 255, 0.28);
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.14);
+}
+
+.auth-box h2 {
+  text-align: center;
+  color: var(--neon-blue);
+  margin-bottom: 22px;
+}
+
+/* Spaces out form fields clearly */
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: var(--card-radius);
+  background: #11111a;
+  border: 2px solid var(--neon-purple);
+  color: white;
+}
+
+.auth-form input:focus {
+  outline: none;
+  box-shadow: 0 0 12px var(--neon-purple);
+}
+
+.switch-text {
+  text-align: center;
+}
+
+.switch-text span {
+  color: var(--neon-blue);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Makes login/sign up comfortable on mobile screens */
+  .login-page .page-header {
+    padding-top: 30px;
+    padding-bottom: 8px;
+  }
+
+  .auth-container {
+    align-items: flex-start;
+    padding-top: 18px;
+  }
+
+  .auth-box {
+    padding: 22px !important;
+  }
+
+  .filter-help {
+    padding: 0 16px;
+  }
+}
+
+/* ============================================================
+   FINAL FIXES: login alignment and category filtering
+============================================================ */
+
+/* Used by JavaScript to fully hide filtered experience cards */
+.content-card.is-hidden {
+  display: none !important;
+}
+
+/* Keeps the login intro aligned with the form width */
+.login-page .page-header {
+  width: min(440px, calc(100% - 32px));
+  margin: 48px auto 0;
+  padding: 0 0 14px;
+  text-align: center;
+}
+
+.login-page .page-header h1,
+.login-page .page-header p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Positions the form directly below the centred intro text */
+.login-page .auth-container {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+
+@media (max-width: 768px) {
+  .login-page .page-header {
+    margin-top: 30px;
+    padding-bottom: 12px;
+  }
+
+  .login-page .auth-container {
+    align-items: center;
+    padding-top: 0;
+  }
+}

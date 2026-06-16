@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse VR Gaming | Home</title>
+  <meta name="description" content="Welcome to Pulse VR Gaming. Book immersive VR experiences and find your nearest venue.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Pulse VR Gaming</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="contents.html">Contents</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="membership.html">Memberships</a></li>
+      </ul>
+
+      <div class="auth-buttons">
+        <a href="login.html" class="cta-btn">Log In</a>
+        <a href="login.html#signup" class="cta-btn">Sign Up</a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- HERO: main landing section and primary booking CTA -->
+  <section class="hero upgraded-hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">Welcome to</p>
+      <h1>Pulse VR Gaming</h1>
+      <p class="hero-text">
+        Step into fully immersive virtual reality arenas, battle with your friends, and experience next‑level gaming.
+      </p>
+      <div class="hero-actions"><a href="bookings.html" class="cta-btn hero-cta">Book a VR Experience</a><a href="contents.html" class="secondary-btn">Browse Games</a></div>
+    </div>
+<div class="hero-visual">
+  <video class="hero-video" autoplay muted loop>
+    <source src="videos/vr-experience.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+  </section>
+
+  <!-- STATS: quick trust indicators -->
+  <section class="stats-section">
+    <div class="stat-card"><strong>20+</strong><span>VR experiences</span></div>
+    <div class="stat-card"><strong>5,000+</strong><span>players welcomed</span></div>
+    <div class="stat-card"><strong>4.9★</strong><span>average rating</span></div>
+  </section>
+
+  <!-- FEATURED GAME: highlights the most popular experience -->
+  <section class="featured-banner">
+    <div>
+      <p class="eyebrow">Most Popular</p>
+      <h2>Escape Reality VR</h2>
+      <p>Team up, solve clues, and escape before the countdown ends.</p>
+    </div>
+    <a href="bookings.html" class="cta-btn">Book Featured Game</a>
+  </section>
+
+  <!-- EXPLORE OUR IMMERSIVE EXPERIENCES -->
+  <section class="experiences-section">
+    <h2>Explore Our Immersive Experiences</h2>
+    <p>Choose from intense laser tag, co-op missions, escape rooms, and more.</p>
+
+    <div class="experiences-grid">
+      <article class="experience-card">
+        <div class="experience-media image-placeholder">
+          <img src="images/vr-laser.jpg" alt="VR Laser Tag Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+          <span>Drop image here</span>
+        </div>
+        <h3>VR Laser Tag</h3>
+        <p>Fast-paced team battles in a neon VR arena.</p>
+        <a href="contents.html" class="book-btn">View Details</a>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-media image-placeholder">
+          <img src="images/coop vr.jpg" alt="Co-op Missions VR Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+          <span>Drop image here</span>
+        </div>
+        <h3>Co-op Missions</h3>
+        <p>Work together to complete high-stakes VR missions.</p>
+        <a href="contents.html" class="book-btn">View Details</a>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-media image-placeholder">
+          <img src="images/vr-escaperoom.jpg" alt="VR Escape Rooms Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+          <span>Drop image here</span>
+        </div>
+        <h3>VR Escape Rooms</h3>
+        <p>Solve puzzles and escape immersive virtual worlds.</p>
+        <a href="contents.html" class="book-btn">View Details</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- FIND YOUR NEAREST VENUE -->
+  <section class="venues-section">
+    <div class="venues-header">
+      <h2>Find Your Nearest Venue</h2>
+      <div class="venue-select-wrapper">
+        <label for="homeVenue" class="visually-hidden">Select venue</label>
+        <select id="homeVenue">
+          <option value="trafford">Trafford Centre</option>
+          <option value="city">Manchester City Centre</option>
+          <option value="salford">Salford Quays</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="venues-grid">
+      <article class="venue-card" data-venue="trafford">
+        <div class="venue-image image-placeholder">
+          <img src="images/venue-trafford-centre.jpg" alt="Trafford Centre VR venue" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+          <span>Drop image here</span>
+        </div>
+        <h3>Trafford Centre</h3>
+        <p>Located inside the Trafford Centre with easy parking and food options.</p>
+        <a href="bookings.html" class="book-btn">Book Now</a>
+      </article>
+
+      <article class="venue-card" data-venue="city">
+        <div class="venue-image image-placeholder">
+          <img src="images/venue-manchester-city-centre.jpg" alt="Manchester City Centre VR venue" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+          <span>Drop image here</span>
+        </div>
+        <h3>Manchester City Centre</h3>
+        <p>Central location, perfect for after-work or weekend sessions.</p>
+        <a href="bookings.html" class="book-btn">Book Now</a>
+      </article>
+
+      <article class="venue-card" data-venue="salford">
+        <div class="venue-image image-placeholder">
+          <img src="images/venue-salford-quays.jpg" alt="Salford Quays VR venue" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+          <span>Drop image here</span>
+        </div>
+        <h3>Salford Quays</h3>
+        <p>Waterfront VR arena with stunning views and modern facilities.</p>
+        <a href="bookings.html" class="book-btn">Book Now</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Pulse VR Gaming | Contact: info@pulsevrgaming.com</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

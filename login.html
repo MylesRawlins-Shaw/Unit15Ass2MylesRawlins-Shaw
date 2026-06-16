@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in or create an account to book VR experiences at Pulse VR Gaming.">
+  <meta name="keywords" content="Pulse VR login, VR account, sign up, virtual reality gaming">
+  <title>Pulse VR Gaming | Login & Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="login-page">
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Pulse VR Gaming</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contents.html">Contents</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="membership.html">Memberships</a></li>
+      </ul>
+
+      <div class="auth-buttons">
+        <a href="login.html" class="cta-btn">Log In</a>
+        <a href="login.html#signup" class="cta-btn">Sign Up</a>
+      </div>      
+
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER: introduces the account area -->
+  <section class="page-header">
+    <h1>Access Your Account</h1>
+    <p>Log in or create a new account to continue.</p>
+  </section>
+
+  <!-- LOGIN & SIGN UP CONTAINER: centred for clearer focus -->
+  <section class="auth-container">
+
+    <!-- LOGIN FORM -->
+    <div class="auth-box" id="loginBox">
+      <h2>Log In</h2>
+
+      <form class="auth-form">
+
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="cta-btn">Log In</button>
+
+        <p class="switch-text">
+          Don't have an account? <span id="switchToSignup">Sign Up</span>
+        </p>
+
+      </form>
+    </div>
+
+    <!-- SIGN UP FORM -->
+    <div class="auth-box hidden" id="signupBox">
+      <h2>Create Account</h2>
+
+      <form class="auth-form">
+
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" name="signupName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="signupEmail">Email Address</label>
+          <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" name="signupPassword" placeholder="Create a password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="signupConfirm">Confirm Password</label>
+          <input type="password" id="signupConfirm" name="signupConfirm" placeholder="Re-enter your password" required>
+        </div>
+
+        <button type="submit" class="cta-btn">Create Account</button>
+
+        <p class="switch-text">
+          Already have an account? <span id="switchToLogin">Log In</span>
+        </p>
+
+      </form>
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

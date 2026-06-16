@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore all VR games and immersive experiences available at Pulse VR Gaming.">
+  <meta name="keywords" content="VR games, virtual reality experiences, Pulse VR, VR catalogue">
+  <title>Pulse VR Gaming | Contents</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Pulse VR Gaming</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contents.html" class="active">Contents</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="membership.html">Memberships</a></li>
+      </ul>
+
+      <div class="auth-buttons">
+        <a href="login.html" class="cta-btn">Log In</a>
+        <a href="login.html#signup" class="cta-btn">Sign Up</a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </nav>
+  </header>
+
+  <section class="page-header enhanced-header">
+    <p class="eyebrow">Choose your adventure</p>
+    <h1>VR Experiences & Games</h1>
+    <p>Browse the full Pulse VR library. Filter by style, compare difficulty, then book the session that fits your group.</p>
+  </section>
+
+  <!-- FILTERS: search and category controls update the experience cards -->
+  <section class="filter-section">
+    <div class="filter-container">
+      <div class="filter-group">
+        <label for="searchBar">Search Experiences</label>
+        <input type="text" id="searchBar" placeholder="Search laser tag, horror, escape rooms..." aria-label="Search VR experiences">
+      </div>
+
+      <div class="filter-group">
+        <label for="categoryFilter">Filter by Category</label>
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="action">Action</option>
+          <option value="horror">Horror</option>
+          <option value="puzzle">Puzzle</option>
+          <option value="adventure">Adventure</option>
+        </select>
+      </div>
+
+      <p class="results-count" id="resultsCount">Showing 6 experiences</p>
+    </div>
+    <p class="filter-help" id="filterHelp">Showing all VR experience categories.</p>
+  </section>
+
+  <!-- EXPERIENCE CARDS: data-category is used by JavaScript filtering -->
+  <section class="contents-grid">
+    <article class="content-card" data-category="action" data-title="VR Laser Tag" data-players="2-8 players" data-duration="30 or 60 mins" data-difficulty="Easy" data-age="Ages 10+">
+      <div class="content-media image-placeholder action-media"><img src="images/vr-laser.jpg" alt="VR Laser Tag Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><span>VR</span></div>
+      <div class="card-topline"><span class="tag action">Action</span><span class="tag">Multiplayer</span></div>
+      <h3>VR Laser Tag</h3>
+      <p>Fast-paced multiplayer combat in a neon arena.</p>
+      <div class="card-meta"><span>2-8 players</span><span>30/60 mins</span><span>Easy</span></div>
+      <div class="card-actions"><button class="book-btn">Book Now</button><span class="view-details">View Details →</span></div>
+    </article>
+
+    <article class="content-card" data-category="puzzle" data-title="Escape Reality" data-players="2-6 players" data-duration="45 mins" data-difficulty="Medium" data-age="Ages 12+">
+      <div class="content-media image-placeholder puzzle-media"><img src="images/vr-escaperoom.jpg" alt="Escape Reality VR Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><span>ESC</span></div>
+      <div class="card-topline"><span class="tag puzzle">Puzzle</span><span class="tag">Teamwork</span></div>
+      <h3>Escape Reality</h3>
+      <p>Solve puzzles and escape before time runs out.</p>
+      <div class="card-meta"><span>2-6 players</span><span>45 mins</span><span>Medium</span></div>
+      <div class="card-actions"><button class="book-btn">Book Now</button><span class="view-details">View Details →</span></div>
+    </article>
+
+    <article class="content-card" data-category="adventure" data-title="Space Adventure" data-players="1-4 players" data-duration="45 mins" data-difficulty="Medium" data-age="Ages 10+">
+      <div class="content-media image-placeholder adventure-media"><img src="images/Space.jpg" alt="Space Adventure VR Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><span>SPACE</span></div>
+      <div class="card-topline"><span class="tag adventure">Adventure</span><span class="tag">Mission</span></div>
+      <h3>Space Adventure</h3>
+      <p>Explore galaxies and complete interstellar missions.</p>
+      <div class="card-meta"><span>1-4 players</span><span>45 mins</span><span>Medium</span></div>
+      <div class="card-actions"><button class="book-btn">Book Now</button><span class="view-details">View Details →</span></div>
+    </article>
+
+    <article class="content-card" data-category="horror" data-title="Haunted VR" data-players="1-4 players" data-duration="30 mins" data-difficulty="Hard" data-age="Ages 15+">
+      <div class="content-media image-placeholder horror-media"><img src="images/haunted-vr.jpg" alt="Haunted VR Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><span>HORROR</span></div>
+      <div class="card-topline"><span class="tag horror">Horror</span><span class="tag">Intense</span></div>
+      <h3>Haunted VR</h3>
+      <p>A terrifying journey through a haunted dimension.</p>
+      <div class="card-meta"><span>1-4 players</span><span>30 mins</span><span>Hard</span></div>
+      <div class="card-actions"><button class="book-btn">Book Now</button><span class="view-details">View Details →</span></div>
+    </article>
+
+    <article class="content-card" data-category="action" data-title="Mech Battle" data-players="2-6 players" data-duration="60 mins" data-difficulty="Medium" data-age="Ages 12+">
+      <div class="content-media image-placeholder action-media"><img src="images/mech-battle.jpg" alt="Mech Battle VR Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><span>MECH</span></div>
+      <div class="card-topline"><span class="tag action">Action</span><span class="tag">Competitive</span></div>
+      <h3>Mech Battle</h3>
+      <p>Pilot giant robots in explosive combat missions.</p>
+      <div class="card-meta"><span>2-6 players</span><span>60 mins</span><span>Medium</span></div>
+      <div class="card-actions"><button class="book-btn">Book Now</button><span class="view-details">View Details →</span></div>
+    </article>
+
+    <article class="content-card" data-category="puzzle" data-title="Mind Maze" data-players="1-5 players" data-duration="45 mins" data-difficulty="Hard" data-age="Ages 12+">
+      <div class="content-media image-placeholder puzzle-media"><img src="images/mind-maze.jpg" alt="Mind Maze VR Experience" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><span>MAZE</span></div>
+      <div class="card-topline"><span class="tag puzzle">Puzzle</span><span class="tag">Brain Teaser</span></div>
+      <h3>Mind Maze</h3>
+      <p>Navigate complex illusions and brain-bending puzzles.</p>
+      <div class="card-meta"><span>1-5 players</span><span>45 mins</span><span>Hard</span></div>
+      <div class="card-actions"><button class="book-btn">Book Now</button><span class="view-details">View Details →</span></div>
+    </article>
+  </section>
+
+  <!-- MODAL: opens when a user taps an experience card -->
+  <div class="experience-modal hidden" id="experienceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close experience details">×</button>
+      <p class="eyebrow">Experience details</p>
+      <h2 id="modalTitle">Experience</h2>
+      <p id="modalDescription">Description</p>
+      <div class="modal-stats">
+        <span id="modalPlayers"></span>
+        <span id="modalDuration"></span>
+        <span id="modalDifficulty"></span>
+        <span id="modalAge"></span>
+      </div>
+      <a href="bookings.html" class="cta-btn">Book This Experience</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Pulse VR Gaming | Contact: info@pulsevrgaming.com</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
